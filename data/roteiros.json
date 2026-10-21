@@ -1,0 +1,152 @@
+[
+  {
+    "id": "historia-brasil",
+    "titulo": "História do Brasil",
+    "tema": "Chegada dos portugueses",
+    "resumo": "Conheça alguns acontecimentos relacionados à chegada dos portugueses ao território que hoje chamamos Brasil.",
+    "ano": 7,
+    "disciplinaId": 1,
+    "professorId": 1,
+    "tempoMinutos": 25,
+    "artigoWikipedia": "Brasil",
+    "questoes": [
+      {
+        "pergunta": "Em que ano os portugueses chegaram ao território que hoje chamamos Brasil?",
+        "resposta": "Em 1500."
+      },
+      {
+        "pergunta": "Qual navegador português comandava a expedição?",
+        "resposta": "Pedro Álvares Cabral."
+      },
+      {
+        "pergunta": "Os povos indígenas já viviam nesse território antes da chegada dos portugueses?",
+        "resposta": "Sim. Diversos povos indígenas já viviam no território."
+      }
+    ]
+  },
+  {
+    "id": "mapas-e-escalas",
+    "titulo": "Mapas e escalas",
+    "tema": "Representação do espaço",
+    "resumo": "Entenda como os mapas representam lugares e como a escala relaciona as distâncias do mapa com as distâncias reais.",
+    "ano": 6,
+    "disciplinaId": 2,
+    "professorId": 2,
+    "tempoMinutos": 20,
+    "artigoWikipedia": "Mapa",
+    "questoes": [
+      {
+        "pergunta": "Para que serve um mapa?",
+        "resposta": "Para representar uma área ou espaço geográfico."
+      },
+      {
+        "pergunta": "O que a escala de um mapa indica?",
+        "resposta": "A relação entre as distâncias representadas e as distâncias reais."
+      },
+      {
+        "pergunta": "Um mapa pode representar uma cidade inteira?",
+        "resposta": "Sim, dependendo do tipo e da escala do mapa."
+      }
+    ]
+  },
+  {
+    "id": "sistema-solar",
+    "titulo": "Sistema Solar",
+    "tema": "Planetas e o Sol",
+    "resumo": "Conheça o Sol, os planetas e outros corpos celestes que fazem parte do Sistema Solar.",
+    "ano": 6,
+    "disciplinaId": 3,
+    "professorId": 3,
+    "tempoMinutos": 30,
+    "artigoWikipedia": "Sistema Solar",
+    "questoes": [
+      {
+        "pergunta": "Qual é a estrela do Sistema Solar?",
+        "resposta": "O Sol."
+      },
+      {
+        "pergunta": "A Terra é um planeta ou uma estrela?",
+        "resposta": "A Terra é um planeta."
+      },
+      {
+        "pergunta": "Qual planeta é conhecido por seus anéis?",
+        "resposta": "Saturno."
+      }
+    ]
+  },
+  {
+    "id": "fracoes",
+    "titulo": "Frações",
+    "tema": "Partes de um todo",
+    "resumo": "Aprenda como uma fração representa partes de um todo e identifique numerador e denominador.",
+    "ano": 6,
+    "disciplinaId": 4,
+    "professorId": 4,
+    "tempoMinutos": 20,
+    "artigoWikipedia": "Fração",
+    "questoes": [
+      {
+        "pergunta": "Na fração 3/4, qual é o numerador?",
+        "resposta": "O número 3."
+      },
+      {
+        "pergunta": "Na fração 3/4, qual é o denominador?",
+        "resposta": "O número 4."
+      },
+      {
+        "pergunta": "A fração 1/2 representa quantas partes de um todo dividido em duas partes iguais?",
+        "resposta": "Uma parte."
+      }
+    ]
+  },
+  {
+    "id": "clima-e-tempo",
+    "titulo": "Clima e tempo",
+    "tema": "Diferenças entre clima e tempo atmosférico",
+    "resumo": "Veja a diferença entre as condições atmosféricas de um dia e os padrões observados durante muitos anos.",
+    "ano": 8,
+    "disciplinaId": 2,
+    "professorId": 2,
+    "tempoMinutos": 25,
+    "artigoWikipedia": "Clima",
+    "questoes": [
+      {
+        "pergunta": "O tempo atmosférico pode mudar de um dia para outro?",
+        "resposta": "Sim."
+      },
+      {
+        "pergunta": "O clima é observado durante períodos curtos ou longos?",
+        "resposta": "Períodos longos."
+      },
+      {
+        "pergunta": "Uma chuva nesta tarde descreve o tempo ou o clima?",
+        "resposta": "O tempo atmosférico."
+      }
+    ]
+  },
+  {
+    "id": "energia",
+    "titulo": "Formas de energia",
+    "tema": "Energia no cotidiano",
+    "resumo": "Conheça exemplos de energia elétrica, térmica, luminosa e outras formas presentes no cotidiano.",
+    "ano": 9,
+    "disciplinaId": 3,
+    "professorId": 3,
+    "tempoMinutos": 30,
+    "artigoWikipedia": "Energia",
+    "questoes": [
+      {
+        "pergunta": "Qual forma de energia está relacionada ao calor?",
+        "resposta": "Energia térmica."
+      },
+      {
+        "pergunta": "Qual forma de energia permite enxergar objetos?",
+        "resposta": "Energia luminosa."
+      },
+      {
+        "pergunta": "Uma lâmpada ligada utiliza energia elétrica?",
+        "resposta": "Sim."
+      }
+    ]
+  }
+]

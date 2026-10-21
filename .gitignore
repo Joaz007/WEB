@@ -1,0 +1,14 @@
+# Dependências
+node_modules/
+
+# Arquivos gerados pelo Next.js
+.next/
+out/
+
+# Arquivos do sistema
+.DS_Store
+
+# Logs do npm
+npm-debug.log*
+node_modules/
+.next/

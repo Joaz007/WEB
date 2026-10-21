@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Ana Souza",
+    "disciplinaId": 1,
+    "escola": "Escola Municipal Exemplo"
+  },
+  {
+    "id": 2,
+    "nome": "Carlos Lima",
+    "disciplinaId": 2,
+    "escola": "Escola Municipal Exemplo"
+  },
+  {
+    "id": 3,
+    "nome": "Mariana Alves",
+    "disciplinaId": 3,
+    "escola": "Escola Municipal Jardim"
+  },
+  {
+    "id": 4,
+    "nome": "Pedro Santos",
+    "disciplinaId": 4,
+    "escola": "Escola Municipal Jardim"
+  }
+]
