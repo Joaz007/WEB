@@ -7,51 +7,63 @@ export default function ApoioWikipedia({ titulo }) {
   const [link, setLink] = useState("");
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(false);
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
+    const controle = new AbortController();
+    let ativo = true;
+    const limite = setTimeout(() => controle.abort(), 8000);
+
     async function buscarResumo() {
       setCarregando(true);
       setErro(false);
 
       try {
-        const tituloCodificado = encodeURIComponent(titulo);
         const resposta = await fetch(
-          `https://pt.wikipedia.org/api/rest_v1/page/summary/${tituloCodificado}`
+          `https://pt.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titulo)}`,
+          { signal: controle.signal }
         );
-
-        if (!resposta.ok) {
-          throw new Error("Não foi possível consultar a Wikipédia.");
-        }
-
+        if (!resposta.ok) throw new Error("Não foi possível consultar a Wikipédia.");
         const dados = await resposta.json();
-
-        if (!dados.extract) {
+        if (typeof dados.extract !== "string" || !dados.extract.trim()) {
           throw new Error("O artigo não tem um resumo disponível.");
         }
-
-        setTexto(dados.extract);
-        setLink(dados.content_urls?.desktop?.page || "");
-      } catch (erroConsulta) {
-        setErro(true);
+        if (ativo) {
+          setTexto(dados.extract);
+          setLink(dados.content_urls?.desktop?.page || "");
+        }
+      } catch {
+        if (ativo) setErro(true);
       } finally {
-        setCarregando(false);
+        clearTimeout(limite);
+        if (ativo) setCarregando(false);
       }
     }
 
     buscarResumo();
-  }, [titulo]);
+    return () => {
+      ativo = false;
+      clearTimeout(limite);
+      controle.abort();
+    };
+  }, [titulo, tentativa]);
 
   return (
     <section className="painel">
       <h2>Texto complementar da Wikipédia</h2>
 
-      {carregando && <p>Carregando texto complementar...</p>}
+      {carregando && <p role="status">Carregando texto complementar...</p>}
 
       {!carregando && erro && (
-        <p>
-          Não foi possível carregar o texto complementar agora. Você ainda pode
-          consultar o roteiro normalmente.
-        </p>
+        <div>
+          <p role="status">
+            Não foi possível carregar o texto complementar agora. Você ainda pode
+            consultar o roteiro normalmente.
+          </p>
+          <button className="botao-secundario" type="button" onClick={() => setTentativa((atual) => atual + 1)}>
+            Tentar novamente
+          </button>
+        </div>
       )}
 
       {!carregando && !erro && (

@@ -1,3 +1,5 @@
+const ANOS_ESCOLARES = [6, 7, 8, 9];
+
 export default function FiltroRoteiros({
   anoSelecionado,
   disciplinaSelecionada,
@@ -14,10 +16,7 @@ export default function FiltroRoteiros({
           onChange={(evento) => aoMudarAno(evento.target.value)}
         >
           <option value="todos">Todos os anos</option>
-          <option value="6">6º ano</option>
-          <option value="7">7º ano</option>
-          <option value="8">8º ano</option>
-          <option value="9">9º ano</option>
+          {ANOS_ESCOLARES.map((ano) => <option key={ano} value={ano}>{ano}º ano</option>)}
         </select>
       </label>
 

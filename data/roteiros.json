@@ -1,6 +1,10 @@
 [
   {
     "id": "historia-brasil",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Brasil", "url": "https://pt.wikipedia.org/wiki/Brasil" }
+    ],
     "titulo": "História do Brasil",
     "tema": "Chegada dos portugueses",
     "resumo": "Conheça alguns acontecimentos relacionados à chegada dos portugueses ao território que hoje chamamos Brasil.",
@@ -26,6 +30,10 @@
   },
   {
     "id": "mapas-e-escalas",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Mapa", "url": "https://pt.wikipedia.org/wiki/Mapa" }
+    ],
     "titulo": "Mapas e escalas",
     "tema": "Representação do espaço",
     "resumo": "Entenda como os mapas representam lugares e como a escala relaciona as distâncias do mapa com as distâncias reais.",
@@ -51,6 +59,10 @@
   },
   {
     "id": "sistema-solar",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Sistema Solar", "url": "https://pt.wikipedia.org/wiki/Sistema_Solar" }
+    ],
     "titulo": "Sistema Solar",
     "tema": "Planetas e o Sol",
     "resumo": "Conheça o Sol, os planetas e outros corpos celestes que fazem parte do Sistema Solar.",
@@ -76,6 +88,10 @@
   },
   {
     "id": "fracoes",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Fração", "url": "https://pt.wikipedia.org/wiki/Fra%C3%A7%C3%A3o" }
+    ],
     "titulo": "Frações",
     "tema": "Partes de um todo",
     "resumo": "Aprenda como uma fração representa partes de um todo e identifique numerador e denominador.",
@@ -101,6 +117,10 @@
   },
   {
     "id": "clima-e-tempo",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Clima", "url": "https://pt.wikipedia.org/wiki/Clima" }
+    ],
     "titulo": "Clima e tempo",
     "tema": "Diferenças entre clima e tempo atmosférico",
     "resumo": "Veja a diferença entre as condições atmosféricas de um dia e os padrões observados durante muitos anos.",
@@ -126,6 +146,10 @@
   },
   {
     "id": "energia",
+    "status": "publicado",
+    "referencias": [
+      { "titulo": "Wikipédia — Energia", "url": "https://pt.wikipedia.org/wiki/Energia" }
+    ],
     "titulo": "Formas de energia",
     "tema": "Energia no cotidiano",
     "resumo": "Conheça exemplos de energia elétrica, térmica, luminosa e outras formas presentes no cotidiano.",

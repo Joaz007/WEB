@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export"
-};
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
-module.exports = nextConfig;
+module.exports = (fase) => ({
+  output: "export",
+  distDir: fase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next"
+});

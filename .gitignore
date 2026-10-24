@@ -3,6 +3,7 @@ node_modules/
 
 # Arquivos gerados pelo Next.js
 .next/
+.next-dev/
 out/
 
 # Arquivos do sistema
@@ -10,5 +11,3 @@ out/
 
 # Logs do npm
 npm-debug.log*
-node_modules/
-.next/

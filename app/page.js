@@ -1,36 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import roteiros from "../data/roteiros.json";
 import disciplinas from "../data/disciplinas.json";
+import { useRoteiros } from "../components/RoteirosProvider";
 import FiltroRoteiros from "../components/FiltroRoteiros";
-import RoteiroCard from "../components/RoteiroCard";
+import ListaRoteiros from "../components/ListaRoteiros";
+import PaginaConteudo from "../components/PaginaConteudo";
 
 export default function PaginaInicial() {
+  const { roteiros, carregado } = useRoteiros();
   const [anoSelecionado, setAnoSelecionado] = useState("todos");
   const [disciplinaSelecionada, setDisciplinaSelecionada] = useState("todas");
 
   const roteirosFiltrados = roteiros.filter((roteiro) => {
-    const anoCombina =
-      anoSelecionado === "todos" || roteiro.ano === Number(anoSelecionado);
-
-    const disciplinaCombina =
-      disciplinaSelecionada === "todas" ||
-      roteiro.disciplinaId === Number(disciplinaSelecionada);
-
-    return anoCombina && disciplinaCombina;
+    const anoCombina = anoSelecionado === "todos" || roteiro.ano === Number(anoSelecionado);
+    const disciplinaCombina = disciplinaSelecionada === "todas" || roteiro.disciplinaId === Number(disciplinaSelecionada);
+    return roteiro.status === "publicado" && anoCombina && disciplinaCombina;
   });
 
   return (
-    <main className="conteudo">
-      <section className="introducao">
-        <p className="etiqueta">ESTUDE NO SEU RITMO</p>
-        <h1>Encontre seu roteiro de estudo</h1>
-        <p>
-          Escolha seu ano e sua disciplina para encontrar materiais de apoio.
-        </p>
-      </section>
-
+    <PaginaConteudo
+      etiqueta="ESTUDE NO SEU RITMO"
+      titulo="Encontre seu roteiro de estudo"
+      descricao="Escolha seu ano e sua disciplina para encontrar materiais de apoio."
+    >
       <FiltroRoteiros
         anoSelecionado={anoSelecionado}
         disciplinaSelecionada={disciplinaSelecionada}
@@ -39,22 +32,12 @@ export default function PaginaInicial() {
         aoMudarDisciplina={setDisciplinaSelecionada}
       />
 
-      <section>
-        <div className="titulo-lista">
-          <h2>Roteiros disponíveis</h2>
-          <span>{roteirosFiltrados.length} materiais</span>
-        </div>
-
-        {roteirosFiltrados.length === 0 ? (
-          <p className="mensagem">Nenhum roteiro encontrado com esses filtros.</p>
-        ) : (
-          <div className="grade-roteiros">
-            {roteirosFiltrados.map((roteiro) => (
-              <RoteiroCard key={roteiro.id} roteiro={roteiro} />
-            ))}
-          </div>
-        )}
-      </section>
-    </main>
+      <ListaRoteiros
+        idTitulo="titulo-roteiros"
+        titulo="Roteiros disponíveis"
+        roteiros={roteirosFiltrados}
+        carregado={carregado}
+      />
+    </PaginaConteudo>
   );
 }
