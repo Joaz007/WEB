@@ -152,7 +152,14 @@ export default function FormularioSolicitacao({ disciplinas }) {
           <CampoFormulario id="quantidadeQuestoes" rotulo="Quantidade de questões" ajuda="Informe um número inteiro de 3 a 10." erro={erros.quantidadeQuestoes}>
             <input {...atributosCampo("quantidadeQuestoes", true)} type="number" min="3" max="10" step="1" inputMode="numeric" />
           </CampoFormulario>
-          <CampoFormulario id="dataUso" rotulo="Data de uso do material" ajuda="Escolha uma data com pelo menos 7 dias de antecedência." erro={erros.dataUso}>
+          <CampoFormulario
+            id="dataUso"
+            rotulo="Data de uso do material"
+            ajuda={dataMinima
+              ? `Escolha a partir de ${dataMinima.split("-").reverse().join("/")} (pelo menos 7 dias de antecedência).`
+              : "Escolha uma data com pelo menos 7 dias de antecedência."}
+            erro={erros.dataUso}
+          >
             <input {...atributosCampo("dataUso", true)} type="date" min={dataMinima || undefined} />
           </CampoFormulario>
         </div>
