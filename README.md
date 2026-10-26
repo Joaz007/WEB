@@ -38,7 +38,6 @@ Revisão final da aplicação e pequenos ajustes para a entrega.
 - Revisão do código das páginas e dos componentes.
 - Conferência dos filtros, das validações do formulário e do tratamento de falhas da Wikipédia.
 - Melhoria no campo de data, mostrando a primeira data permitida para usar o material.
-- Conferência dos requisitos e dos arquivos necessários para a entrega.
 
 ## Requisitos
 
@@ -96,7 +95,7 @@ Se o build terminar sem erros, o Next.js gera a pasta `out` com os arquivos est�
 
 A rota dinâmica usa `generateStaticParams()` para gerar uma página para cada ID existente em `data/roteiros.json`.
 
-**Observação:** a consulta à Wikipédia depende de internet e pode falhar. O restante do roteiro continua aparecendo mesmo quando isso acontece. Para testar o site exportado localmente, execute `npm start`. Não abra os arquivos HTML diretamente pelo gerenciador de arquivos.
+**Observação:** a consulta à Wikipédia depende de internet e pode falhar. O restante do roteiro continua aparecendo mesmo quando isso acontece. Para testar o site exportado localmente, use um servidor estático. Não abra os arquivos HTML diretamente pelo gerenciador de arquivos.
 
 ## Organização das pastas
 
